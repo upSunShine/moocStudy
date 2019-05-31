@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ext.springboot.springproducer.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.ext.springboot.springproducer.entity.Order">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="message_id" property="messageId" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.ext.springboot.springproducer.entity.Order">
+        INSERT INTO t_order (id,name,message_id)
+        VALUES (
+        #{id,jdbcType=VARCHAR},
+        #{name,jdbcType=VARCHAR},
+        #{messageId,jdbcType=VARCHAR}
+        )
+    </insert>
+</mapper>
