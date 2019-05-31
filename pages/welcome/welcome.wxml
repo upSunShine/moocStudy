@@ -1,9 +1,0 @@
-<!--pages/welcome/welcome.wxml 页面骨架-->
-<view class="container">
-  <image src="/images/avatar/1.png" class='user-avatar'></image>
-  <!--text \n可进行换行 包含在这个标签里面的文字在手机上才可以常摁复制 -->
-  <text class='user-name'>hello,<text style='color:red'>world</text></text>
-  <view class='moto-container' bindtap='onTap'>
-    <text class='moto'>开启小程序之旅</text>
-  </view>
-</view>
