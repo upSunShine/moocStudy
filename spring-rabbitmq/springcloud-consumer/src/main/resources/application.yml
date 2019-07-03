@@ -1,0 +1,35 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input_channel:
+          destination: exchange-3
+          group: queue-3
+          binder: rabbit_cluster
+      binders:
+        rabbit_cluster:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 192.168.2.203
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
+      rabbit:
+        bindings:
+          input_channel:
+            requeueRejected: false
+            acknowledgeMode: manual
+            recoveryInterval: 3000
+            durableSubscription: true
+            maxConcurrency: 5
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+  application:
+    name: consumer
+server:
+  port: 8082
+  servlet:
+    context-path: /consumer

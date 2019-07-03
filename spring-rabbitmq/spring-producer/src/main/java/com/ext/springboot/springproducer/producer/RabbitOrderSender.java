@@ -5,7 +5,6 @@ import com.ext.springboot.springproducer.entity.Order;
 import com.ext.springboot.springproducer.mapper.BrokerMessageLogMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,12 +39,13 @@ public class RabbitOrderSender {
             logger.info("correlationData"+correlationData);
             String messageId = correlationData.getId();
             logger.info("消息确认返回值："+ack);
-            if(ack){
+            if(!ack){
                 messageLogMapper.changeBrokerMessageLogStatus(messageId, Constans.ORDER_SENG_SUCCESS,new Date());
             }else{
                 //根据具体失败原因选择补偿或重试
                 logger.info("异常处理：返回结果："+s);
             }
+
 
 
         }

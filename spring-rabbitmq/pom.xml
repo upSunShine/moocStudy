@@ -15,8 +15,11 @@
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
+		<module>amqp</module>
 		<module>spring-producer</module>
 		<module>springboot-consumer</module>
+		<module>springcloud-producer</module>
+		<module>springcloud-consumer</module>
 	</modules>
 
 	<properties>

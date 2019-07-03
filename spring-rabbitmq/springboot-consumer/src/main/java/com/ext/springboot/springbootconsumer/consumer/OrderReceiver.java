@@ -18,6 +18,13 @@ import java.util.Map;
 public class OrderReceiver {
 
 
+    /**
+     * 建议将这里配置到配置文件
+     * @param order
+     * @param headers
+     * @param channel
+     * @throws Exception
+     */
     @RabbitListener(bindings = @QueueBinding(
             value = @Queue(value = "order-queue",durable = "true"),
             exchange = @Exchange(value = "order-exchange",durable = "true",type = "topic"),

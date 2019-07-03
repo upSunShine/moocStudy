@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/amqp/amqp.iml" filepath="$PROJECT_DIR$/amqp/amqp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-producer/spring-producer.iml" filepath="$PROJECT_DIR$/spring-producer/spring-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-rabbitmq.iml" filepath="$PROJECT_DIR$/spring-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-consumer/springboot-consumer.iml" filepath="$PROJECT_DIR$/springboot-consumer/springboot-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-consumer/springcloud-consumer.iml" filepath="$PROJECT_DIR$/springcloud-consumer/springcloud-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-producer/springcloud-producer.iml" filepath="$PROJECT_DIR$/springcloud-producer/springcloud-producer.iml" />
+    </modules>
+  </component>
+</project>
